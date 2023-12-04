@@ -8,11 +8,6 @@ on:
       - main
 
 # Set environment variables
-# env:
-#   MONGODB_URI: ${{ secrets.MONGODB_URI }}
-#   TOKEN_KEY: ${{ secrets.TOKEN_KEY }}
-#   EMAIL: ${{ secrets.EMAIL }}
-#   PASSWORD: ${{ secrets.PASSWORD }}
 env:
   MONGODB_URI: ${{ secrets.MONGODB_URI }}
   SECRET: ${{ secrets.SECRET }}
@@ -27,41 +22,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Install dependencies and run tests for the client application
-      - name: Install and Test Client
+      # Install dependencies and run tests for the frontend application
+      - name: Install and Test frontend
         working-directory: ./frontend
         run: |
           npm install
 
-      # Install dependencies, export environment variables to be used by application and run tests for the server application
-      # - name: Install and Test Server
-      #   working-directory: ./server
-      #   run: |
-      #     npm install
-      #     export MONGODB_URI=$MONGODB_URI
-      #     export TOKEN_KEY=$TOKEN_KEY
-      #     export EMAIL=$EMAIL
-      #     export PASSWORD=$PASSWORD
-      #     npm run test
-      - name: Install and Test Server
+      # Install dependencies, export environment variables to be used by application and run tests for the backend application
+      - name: Install and Test backend
         working-directory: ./backend
         run: |
           npm install
           export MONGO_URI=$MONGODB_URI
           export SECRET=$SECRET
 
-      # Build a Docker image for the client application
-      - name: Build Client Docker Image
-        working-directory: ./client
-        # Build image with tag rakeshpotnuru/productivity-app:client
+      # Build a Docker image for the frontend application
+      - name: Build frontend Docker Image
+        working-directory: ./frontend
         run: |
           docker build -t rj2332/mern-app:frontend-${{github.run_number}} .
 
-      # Build a Docker image for the server application
-      - name: Build Server Docker Image
-        working-directory:
-          ./server
-          # Build image with tag rakeshpotnuru/productivity-app:server
+      # Build a Docker image for the backend application
+      - name: Build backend Docker Image
+        working-directory: ./backend
         run: |
           docker build -t rj2332/mern-app:backend-${{github.run_number}} .
 
