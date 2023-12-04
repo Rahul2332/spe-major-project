@@ -29,7 +29,7 @@ jobs:
 
       # Install dependencies and run tests for the client application
       - name: Install and Test Client
-        working-directory: ./client
+        working-directory: ./frontend
         run: |
           npm install
           npm run test
@@ -45,7 +45,7 @@ jobs:
       #     export PASSWORD=$PASSWORD
       #     npm run test
       - name: Install and Test Server
-        working-directory: ./server
+        working-directory: ./backend
         run: |
           npm install
           export MONGO_URI=$MONGODB_URI
