@@ -1,0 +1,22 @@
+version: '3.5'
+services:
+  backend:
+    image: backend
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongodb
+      
+  frontend:
+    image: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    # volumes:
+    #   - /Users/rahuljain/Documents/Semester7/SPE/MajorProject/MERN-Auth-Tutorial-lesson-17/data/db:/data/db:rw
