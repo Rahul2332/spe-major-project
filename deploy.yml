@@ -18,6 +18,7 @@
     - name: Pull the Docker images specifed in docker-compose
       command: docker-compose pull
 
+
     # We don't start the containers because we need to copy the env.yaml file into the backend container
     # before we can start anything.
     # So we first create the containers so that the next command "docker cp" can run properly
