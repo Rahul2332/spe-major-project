@@ -60,6 +60,15 @@ jobs:
       #   run: |
       #     docker push rj2332/mern-app:frontend
       #     docker push rj2332/mern-app:backend
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIV_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PUB_KEY }}" > ~/.ssh/id_rsa.pub
+          chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa.pub
+          ssh-keyscan -H ${{ secrets.IP }} >> ~/.ssh/known_hosts
       
       - name: Checkout 
         uses: actions/checkout@v3
@@ -69,8 +78,8 @@ jobs:
         with:
           playbook: deploy.yml # path to your Ansible playbook
           directory: ./
-          key: ${{ secrets.SSH_PRIVATE_KEY }} # the ssh private key for ansible to use to connect to the servers, stored as "ansible_ssh_private_key" in the GitHub secrets
-          inventory: ${{ secrets.ANSIBLE_INVENTORY }} # the ansible inventory to use, stored as "ansible_inventory" in the GitHub secrets
+          key: ${{ secrets.SSH_PRIV_KEY }} # the ssh private key for ansible to use to connect to the servers, stored as "ansible_ssh_private_key" in the GitHub secrets
+          inventory: inventory # the ansible inventory to use, stored as "ansible_inventory" in the GitHub secrets
 
       
 
