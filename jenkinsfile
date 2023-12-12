@@ -3,7 +3,6 @@ pipeline{
         docker_image = ""
         // PATH = "~/apache-maven-3.9.5/bin:$PATH"
     }
-    
     agent any
     stages{
         stage('Stage 8: Ansible Deployment') {
