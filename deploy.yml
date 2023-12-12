@@ -7,12 +7,12 @@
         src: ./docker-compose.yml
         dest: ~/Downloads
     
-    # - name: Pull HelloWorld Docker Image
-    #   become: true
-    #   docker_image:
-    #     name: hello-world
-    #     source: pull
-    #   register: result
+    - name: Pull HelloWorld Docker Image
+      become: true
+      docker_image:
+        name: hello-world
+        source: pull
+      register: result
 
     # - name: Display Docker Image Pull Result
     #   debug:
