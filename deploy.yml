@@ -7,12 +7,12 @@
         src: ./docker-compose.yml
         dest: /home/rahul/Downloads
     
-    - name: Pull HelloWorld Docker Image
-      become: true
-      docker_image:
-        name: hello-world
-        source: pull
-      register: result
+    # - name: Pull HelloWorld Docker Image
+    #   become: true
+    #   docker_image:
+    #     name: hello-world
+    #     source: pull
+    #   register: result
 
     # - name: Display Docker Image Pull Result
     #   debug:
@@ -21,26 +21,26 @@
     # - name: Change directory to Downloads
     #   become: true
     #   become_user: "{{ansible_user}}"
-    #   chdir: ~/Downloads
+    #   chdir: /home/rahul/Downloads
 
-    # Pull the Docker images from Docker Hub
+    Pull the Docker images from Docker Hub
     # - name: Pull the Docker images specifed in docker-compose
     #   become: true
     #   shell:
     #     cmd: "docker-compose pull"
     #     chdir: /home/rahul/Downloads
 
-    # - name: Docker Image Pull Result
-    #   become: true
-    #   command: "docker-compose pull"
-    #   args:
-    #     chdir: "/home/rahul/Downloads"
+    - name: Docker Image Pull Result
+      become: true
+      command: "docker-compose pull"
+      args:
+        chdir: "/home/rahul/Downloads"
     
-    # - name: Create and start services
-    #   become: true
-    #   command: "docker-compose up -d"
-    #   args:
-    #     chdir: "/home/rahul/Downloads"
+    - name: Create and start services
+      become: true
+      command: "docker-compose up -d"
+      args:
+        chdir: "/home/rahul/Downloads"
 
 
     # We don't start the containers because we need to copy the env.yaml file into the backend container
