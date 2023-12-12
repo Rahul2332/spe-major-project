@@ -5,7 +5,7 @@
     - name: Copy Docker Compose file from host machine to remote host
       copy:
         src: ./docker-compose.yml
-        dest: ~/Downloads
+        dest: /home/rahul/Downloads
     
     - name: Pull HelloWorld Docker Image
       become: true
