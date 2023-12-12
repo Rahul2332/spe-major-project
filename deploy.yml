@@ -30,17 +30,17 @@
     #     cmd: "docker-compose pull"
     #     chdir: /home/rahul/Downloads
 
-    - name: Docker Image Pull Result
-      become: true
-      command: "docker-compose pull"
-      args:
-        chdir: "/home/rahul/Downloads"
+    # - name: Docker Image Pull Result
+    #   become: true
+    #   command: "docker-compose pull"
+    #   args:
+    #     chdir: "/home/rahul/Downloads"
     
-    - name: Create and start services
-      become: true
-      command: "docker-compose up -d"
-      args:
-        chdir: "/home/rahul/Downloads"
+    # - name: Create and start services
+    #   become: true
+    #   command: "docker-compose up -d"
+    #   args:
+    #     chdir: "/home/rahul/Downloads"
 
 
     # We don't start the containers because we need to copy the env.yaml file into the backend container
