@@ -23,7 +23,7 @@
     #   become_user: "{{ansible_user}}"
     #   chdir: /home/rahul/Downloads
 
-    Pull the Docker images from Docker Hub
+    # Pull the Docker images from Docker Hub
     # - name: Pull the Docker images specifed in docker-compose
     #   become: true
     #   shell:
