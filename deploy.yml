@@ -1,7 +1,7 @@
 ---
 - name: Deploy docker images
-  hosts: all
-  # hosts: localhost
+  # hosts: all
+  hosts: localhost
 
   tasks:
     - name: Copy Docker Compose file from host machine to remote host
