@@ -26,7 +26,7 @@
       command: docker-compose up --no-start
 
     - name: Copy the env.yaml file to backend Docker container
-      command: docker cp .env rahul_backend_1:/usr/src/app/.env
+      command: docker cp .env rahul_backend_1:/app/.env
 
       
     - name: Run the pulled Docker images in detached mode
