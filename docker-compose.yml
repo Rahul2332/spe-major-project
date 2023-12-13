@@ -22,7 +22,7 @@ services:
       - "27017:27017"
 
   volumes:
-      - /Users/rahuljain/Documents/Semester7/SPE/MajorProject/MERN-Auth-Tutorial-lesson-17/data/db:/data/db:rw
+      - ./data/db:/data/db:rw
 
 
 # version: '3.5'
