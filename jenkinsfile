@@ -2,7 +2,7 @@ pipeline {
     environment {
         backend = 'backend' 
         frontend = 'frontend' 
-        mongoImage = 'mongo:latest' 
+        mongoImage = 'mongo' 
         mongoContainerName = 'mongodb' 
         MONGO_PORT = '27017'
         docker_image = ''
@@ -15,9 +15,8 @@ pipeline {
         stage('Stage 1: Pull MongoDB') {
             steps {
                 script {
-                    docker.withRegistry('', 'dockerhub_id') {
-                        docker.image("${mongoImage}").pull()
-                    }
+                    // Pull the MongoDB image
+                    sh "/usr/local/bin/docker pull mongo"
                 }
             }
         }
@@ -59,10 +58,9 @@ pipeline {
         stage('Stage 5: Push Backend and Frontend to DockerHub') {
             steps {
                 script {
-                    docker.withRegistry('', 'DockerHubCred') {
-                        sh '/usr/local/bin/docker push rj2332/mern-app:backend'
-                        sh '/usr/local/bin/docker push rj2332/mern-app:frontend'
-                    }
+                    sh '/usr/local/bin/docker login -u "rj2332" -p "male782332"'
+                    sh '/usr/local/bin/docker push rj2332/mern-app:backend'
+                    sh '/usr/local/bin/docker push rj2332/mern-app:frontend'
                 }
             }
         }
