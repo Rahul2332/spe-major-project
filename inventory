@@ -1,2 +1,1 @@
-[localhost]
-localhost ansible_user=rahuljain
+localhost ansible_user = rahuljain
