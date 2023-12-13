@@ -1,17 +1,94 @@
-pipeline{
-    environment{
-        docker_image = ""
-        // PATH = "~/apache-maven-3.9.5/bin:$PATH"
+pipeline {
+    environment {
+        backend = 'backend' 
+        frontend = 'frontend' 
+        mongoImage = 'mongo:latest' 
+        mongoContainerName = 'mongodb' 
+        MONGO_PORT = '27017'
+        docker_image = ''
     }
+    
     agent any
-    stages{
-        stage('Stage 8: Ansible Deployment') {
+
+    stages {
+        
+        stage('Stage 1: Pull MongoDB') {
             steps {
-                dir('Deployment'){
-                    sh 'ansible-playbook -i inventory deploy.yml'
+                script {
+                    docker.withRegistry('', 'dockerhub_id') {
+                        docker.image("${mongoImage}").pull()
+                    }
+                }
+            }
+        }
+        
+        stage('Stage 2: Git Clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Rahul2332/spe-major-project'
+            }
+        }
+
+        // stage('Stage 3: Testing Frontend and Backend') {
+        //     steps {
+        //         dir('backend')
+        //         {
+        //             sh "docker build -t menkchad/backend-test -f Dockerfile.test ."
+        //             // sh "docker run menkchad/backend-test"
+        //         }
+        //         dir('frontend')
+        //         {
+        //             sh "docker build -t menkchad/frontend-test -f Dockerfile.test ."
+        //             // sh "docker run menkchad/frontend-test"
+        //         }
+        //     }
+        // }
+        
+        stage('Stage 4: Build Frontend and Backend') {
+            steps {
+                dir('backend')
+                {
+                    sh "/usr/local/bin/docker build -t rj2332/mern-app:backend ."
+                }
+                dir('frontend') 
+                {
+                    sh "/usr/local/bin/docker build -t rj2332/mern-app:frontend ."
                 }
             }
         }
 
+        stage('Stage 5: Push Backend and Frontend to DockerHub') {
+            steps {
+                script {
+                    docker.withRegistry('', 'DockerHubCred') {
+                        sh '/usr/local/bin/docker push rj2332/mern-app:backend'
+                        sh '/usr/local/bin/docker push rj2332/mern-app:frontend'
+                    }
+                }
+            }
+        }
+
+        stage('Stage 6: Clean') {
+            steps {
+                script {
+                    sh '/usr/local/bin/docker container prune -f'
+                    sh '/usr/local/bin/docker image prune -f'
+                    sh 'if [ -n "$(/usr/local/bin/docker ps -aq)" ]; then /usr/local/bin/docker rm -f $(/usr/local/bin/docker ps -aq); fi'
+                    // sh 'if [ -n "$(docker images -aq)" ]; then docker rmi -f $(docker images -aq); fi'
+                }
+            }
+        }
+
+        stage('Stage 7: Ansible Deployment') {
+            steps {
+                // ansiblePlaybook(
+                //     becomeUser: null,
+                //     credentialsId: 'localhost',
+                //     installation: 'Ansible',
+                //     inventory: 'inventory',
+                //     playbook: 'deploy.yml'
+                // )
+                sh '/opt/homebrew/bin/ansible-playbook deploy.yml -i inventory'
+            }
+        }
     }
 }
