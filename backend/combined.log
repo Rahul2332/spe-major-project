@@ -75,3 +75,4 @@
 {"level":"info","message":"Deleted workout","timestamp":"2023-12-14T09:45:19.226Z"}
 {"level":"info","message":"Deleted workout","timestamp":"2023-12-14T09:45:19.665Z"}
 {"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T09:45:22.284Z"}
+{"level":"error","message":"Datbase connection failed","timestamp":"2023-12-14T09:53:08.942Z"}

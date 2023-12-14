@@ -27,7 +27,6 @@ app.use('/api/user', userRoutes)
 //   process.env.MONGO_URI = 'mongodb://localhost:27017/testdb'; // Adjust the database name as needed
 // }
 
-
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     // listen for requests
