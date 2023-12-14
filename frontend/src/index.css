@@ -3,7 +3,7 @@
 
 /* layout */
 :root {
-  --primary: #1aac83;
+  --primary: #6C63FF;
   --error: #e7195a;
 }
 body {
@@ -12,7 +12,7 @@ body {
   font-family: "Poppins";
 }
 header {
-  background: #fff;
+  background: #6b63ff5e;
 }
 header .container {
   max-width: 1400px;
