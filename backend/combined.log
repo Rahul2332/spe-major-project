@@ -1,13 +1,63 @@
-{"level":"info","message":"Datbase connection successful","timestamp":"2023-12-14T06:27:50.905Z"}
-{"level":"info","message":"User logged in successfully","timestamp":"2023-12-14T06:27:59.233Z"}
-{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T06:27:59.294Z"}
-{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T06:27:59.303Z"}
-{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T06:28:03.297Z"}
-{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T06:28:05.026Z"}
-{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T06:28:05.615Z"}
-{"level":"info","message":"Datbase connection successful","timestamp":"2023-12-14T06:29:42.839Z"}
-{"level":"info","message":"Datbase connection successful","timestamp":"2023-12-14T07:14:37.419Z"}
-{"level":"info","message":"User logged in successfully","timestamp":"2023-12-14T07:14:53.690Z"}
-{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T07:14:53.712Z"}
-{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T07:14:53.717Z"}
-{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T07:14:59.816Z"}
+{"level":"info","message":"Datbase connection successful","timestamp":"2023-12-14T07:44:43.020Z"}
+{"level":"info","message":"Datbase connection successful","timestamp":"2023-12-14T07:51:56.524Z"}
+{"level":"info","message":"User signed up successfully","timestamp":"2023-12-14T07:52:04.526Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T07:52:04.558Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T07:52:04.565Z"}
+{"level":"info","message":"Datbase connection successful","timestamp":"2023-12-14T08:03:02.897Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2023-12-14T08:03:23.943Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:03:23.978Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:03:23.984Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:03:39.064Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:04:10.267Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:04:19.980Z"}
+{"level":"error","message":"Please fill in all the fields","timestamp":"2023-12-14T08:06:05.799Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:07:36.227Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:07:36.233Z"}
+{"level":"error","message":"Please fill in all the fields","timestamp":"2023-12-14T08:07:39.642Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:09:54.366Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:09:54.370Z"}
+{"level":"error","message":"Please fill in all the fields","timestamp":"2023-12-14T08:10:04.563Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:10:07.543Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:12:58.700Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:12:58.704Z"}
+{"level":"error","message":"Please fill in all the fields","timestamp":"2023-12-14T08:13:02.113Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:16:08.236Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:16:08.238Z"}
+{"level":"error","message":"Please fill in all the fields","timestamp":"2023-12-14T08:16:11.514Z"}
+{"level":"info","message":"Datbase connection successful","timestamp":"2023-12-14T08:18:18.659Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:18:23.902Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:18:23.906Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:18:27.323Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:22:45.420Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:22:45.426Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:22:45.458Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:22:45.464Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:22:59.729Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:22:59.841Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:22:59.994Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:23:00.145Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:23:00.396Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:23:03.319Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:23:06.185Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:28:53.408Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:28:54.514Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:28:54.656Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:28:54.792Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2023-12-14T08:29:17.797Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:29:17.818Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:29:17.827Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:29:22.830Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2023-12-14T08:29:24.887Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:29:24.908Z"}
+{"level":"info","message":"Get request for all workouts","timestamp":"2023-12-14T08:29:24.914Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:33:27.379Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:33:30.983Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:33:33.625Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:33:36.575Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:34:06.315Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:34:09.538Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:34:10.504Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:34:13.074Z"}
+{"level":"info","message":"ADd workout to db success","timestamp":"2023-12-14T08:34:15.524Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:34:16.139Z"}
+{"level":"info","message":"Deleted workout","timestamp":"2023-12-14T08:34:16.289Z"}
