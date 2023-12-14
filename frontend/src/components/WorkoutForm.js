@@ -46,9 +46,9 @@ const WorkoutForm = () => {
 
   return (
     <form className="create" onSubmit={handleSubmit}>
-      <h3>Add a New Blog Post</h3>
+      <h3>Add a New Task</h3>
 
-      <label>Blog Title:</label>
+      <label>Task Title:</label>
       <input
         type="text"
         onChange={(e) => setTitle(e.target.value)}
@@ -56,7 +56,7 @@ const WorkoutForm = () => {
         className={emptyFields.includes('title') ? 'error' : ''}
       />
 
-      <label>Blog Description:</label>
+      <label>Task Description:</label>
       <input
         type="text"
         onChange={(e) => setReps(e.target.value)}
@@ -64,7 +64,7 @@ const WorkoutForm = () => {
         className={emptyFields.includes('description') ? 'error' : ''}
       />
 
-      <button>Add Workout</button>
+      <button>Add Blog</button>
       {error && <div className="error">{error}</div>}
     </form>
   );

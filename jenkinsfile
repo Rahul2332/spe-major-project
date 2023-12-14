@@ -69,20 +69,12 @@ pipeline {
                     sh '/usr/local/bin/docker container prune -f'
                     sh '/usr/local/bin/docker image prune -f'
                     sh 'if [ -n "$(/usr/local/bin/docker ps -aq)" ]; then /usr/local/bin/docker rm -f $(/usr/local/bin/docker ps -aq); fi'
-                    // sh 'if [ -n "$(docker images -aq)" ]; then docker rmi -f $(docker images -aq); fi'
                 }
             }
         }
 
         stage('Stage 7: Ansible Deployment') {
             steps {
-                // ansiblePlaybook(
-                //     becomeUser: null,
-                //     credentialsId: 'localhost',
-                //     installation: 'Ansible',
-                //     inventory: 'inventory',
-                //     playbook: 'deploy.yml'
-                // )
                 sh '/opt/homebrew/bin/ansible-playbook deploy.yml -i inventory'
             }
         }
