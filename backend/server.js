@@ -20,7 +20,12 @@ app.use((req, res, next) => {
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
-// connect to db
+const env = process.env.NODE_ENV || 'development';
+
+if (env === 'test') {
+  process.env.MONGO_URI = 'mongodb://localhost:27017/testdb'; // Adjust the database name as needed
+}
+
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     // listen for requests
@@ -31,3 +36,5 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((error) => {
     console.log(error)
   })
+
+  module.exports = app;
